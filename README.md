@@ -9,19 +9,19 @@ Pengfei Xia, Ziqiang Li, Wei Zhang, and Bin Li, *International Joint Conferences
 ## Searching
 
 ```python
-# Use random selection to create 0.01 * 50000 = 500 poisoned samples for CIFAR-10
+# Use RSS to create 0.01 * 50000 = 500 poisoned samples on CIFAR-10
 python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 0
 
-# Use FUS to create 0.01 * 50000 = 500 poisoned samples for CIFAR-10, with the model set to VGG-16, alpha set to 0.5, and N set to 10
+# Use FUS to create 0.01 * 50000 = 500 poisoned samples on CIFAR-10, with the model set to VGG-16, N set to 10, and alpha set to 0.5
 python search.py --data_path your_path --data_name cifar10 --model_name vgg16 --ratio 0.01 --n_iter 10 --alpha 0.5
 ```
 
 ### Transfering
 
 ```python
-# Use random selected poisoned samples for training a new model to
-python transfer.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 0
+# Use the RSS selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
+python transfer.py --data_path your_path --data_name cifar10 --model_name vgg13 --samples_idx cifar10_vgg16_blended_0_0_0.01_0
 
-# Use filtering-and-updating strategy to create 0.01 * 50000 = 500 poisoned samples for CIFAR-10
-python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 10 --alpha 0.5
+# Use the FUS selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
+python transfer.py --data_path your_path --data_name cifar10 --model_name vgg13 --samples_idx cifar10_vgg16_blended_0_0_0.01_10_0.5
 ```
