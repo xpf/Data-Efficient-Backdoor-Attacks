@@ -16,7 +16,7 @@ python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter
 python search.py --data_path your_path --data_name cifar10 --model_name vgg16 --ratio 0.01 --n_iter 10 --alpha 0.5
 ```
 
-## Transfering
+## Transferring
 
 ```python
 # Use the RSS selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
