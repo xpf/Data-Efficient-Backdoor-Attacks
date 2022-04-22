@@ -12,6 +12,16 @@ Pengfei Xia, Ziqiang Li, Wei Zhang, and Bin Li, *International Joint Conferences
 # Use random selection to create 0.01 * 50000 = 500 poisoned samples for CIFAR-10
 python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 0
 
+# Use FUS to create 0.01 * 50000 = 500 poisoned samples for CIFAR-10
+python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 10 --alpha 0.5
+```
+
+### Transfering
+
+```python
+# Use random selected poisoned samples for training a new model to
+python transfer.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 0
+
 # Use filtering-and-updating strategy to create 0.01 * 50000 = 500 poisoned samples for CIFAR-10
 python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 10 --alpha 0.5
 ```
