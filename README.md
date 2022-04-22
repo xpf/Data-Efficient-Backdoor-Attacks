@@ -9,6 +9,5 @@ Pengfei Xia, Ziqiang Li, Wei Zhang, and Bin Li, *International Joint Conferences
 ## Searching
 
 ```python
-# Create random poisoned samples 
-python search.py --data_path your_path --data_name cifar10 --model_name vgg11 --mlmmdr_lamb 0
+python search.py --data_path your_path --data_name cifar10 --ratio 0.01 --n_iter 0
 ```
