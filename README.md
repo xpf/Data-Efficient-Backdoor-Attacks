@@ -1,6 +1,6 @@
 # Data-Efficient-Backdoor-Attacks (PyTorch)
 
-<div align=center> <img src="./figures/iterations.png" width="70%" height="70%"/> </div>
+<div align=center> <img src="./figures/iterations.png" width="50%" height="50%"/> </div>
 
 [Data Efficient Backdoor Attacks]()
 
