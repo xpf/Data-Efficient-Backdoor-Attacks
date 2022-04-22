@@ -19,9 +19,9 @@ python search.py --data_path your_path --data_name cifar10 --model_name vgg16 --
 ## Transferring
 
 ```python
-# Use the RSS selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
+# Use the RSS-selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
 python transfer.py --data_path your_path --data_name cifar10 --model_name vgg13 --samples_idx cifar10_vgg16_blended_0_0_0.01_0
 
-# Use the FUS selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
+# Use the FUS-selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
 python transfer.py --data_path your_path --data_name cifar10 --model_name vgg13 --samples_idx cifar10_vgg16_blended_0_0_0.01_10_0.5
 ```
