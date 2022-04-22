@@ -1,5 +1,7 @@
 # Data-Efficient-Backdoor-Attacks (PyTorch)
 
+<div align=center> <img src="./figures/iterations.png" width="70%" height="70%"/> </div>
+
 [Data Efficient Backdoor Attacks]()
 
 Pengfei Xia, Ziqiang Li, Wei Zhang, and Bin Li, *International Joint Conferences on Artificial Intelligence*, 2022.
