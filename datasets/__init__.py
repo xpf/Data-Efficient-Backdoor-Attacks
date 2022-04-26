@@ -9,7 +9,8 @@ DATASETS = {
 
 def build_transform(train, img_size, crop, flip):
     transform = []
-    transform.append(transforms.Resize((img_size + crop, img_size + crop)))
+    transform.append(transforms.Resize((img_size, img_size)))
+    transform.append(transforms.Pad(crop))
     if train:
         transform.append(transforms.RandomCrop((img_size, img_size)))
         if flip: transform.append(transforms.RandomHorizontalFlip(p=0.5))
