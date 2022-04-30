@@ -27,3 +27,16 @@ python transfer.py --data_path your_path --data_name cifar10 --model_name vgg13 
 # Use the FUS-selected poisoned samples for backdooring a new VGG-13 model on CIFAR-10
 python transfer.py --data_path your_path --data_name cifar10 --model_name vgg13 --samples_idx cifar10_vgg16_blended_0_0_0.01_10_0.5
 ```
+
+## Citation
+
+If you find this work useful for your research, please consider citing our paper:
+
+```
+@article{xia2022data,
+  title={Data-Efficient Backdoor Attacks},
+  author={Xia, Pengfei and Li, Ziqiang and Zhang, Wei and Li, Bin},
+  journal={arXiv preprint arXiv:2204.12281},
+  year={2022}
+}
+```
