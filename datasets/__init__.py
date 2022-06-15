@@ -1,9 +1,11 @@
 from os.path import join
 from datasets.cifar10 import CIFAR10
+from datasets.imagenet10 import ImageNet10
 import torchvision.transforms as transforms
 
 DATASETS = {
     'cifar10': CIFAR10,
+    'imagenet10': ImageNet10,
 }
 
 
